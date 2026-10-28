@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeamBoard · presentazioni LaTeX guidate</title>
+<meta name="description" content="Crea presentazioni Beamer con una procedura guidata, senza conoscere LaTeX. Gratuita, funziona nel browser e anche senza internet.">
+<meta name="theme-color" content="#2B2240">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icona.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icona-192.png">
+<link rel="stylesheet" href="css/beamboard.css">
+
+</head>
+<body>
+<div class="top">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="19" cy="19" r="15" fill="#F3B33D"/><circle cx="19" cy="19" r="10" fill="#E4572E"/><circle cx="19" cy="19" r="5" fill="#17A398"/><circle cx="35.5" cy="35.5" r="3.5" fill="var(--ink)"/></svg>
+    <b>BeamBoard</b><span class="doc" id="docName"></span>
+  </div>
+  <span class="status" id="status" data-state="busy"><span class="dot"></span><span id="statusText">Preparo il motore…</span></span>
+  <button class="btn" id="installBtn" hidden>Installa</button>
+  <a class="btn round" href="aiuto.html" target="_blank" title="Guida" aria-label="Guida">?</a>
+  <button class="btn" id="setBtn">Aspetto e dati</button>
+  <button class="btn" id="newBtn">Nuova</button>
+  <button class="btn" id="openBtn">Apri</button>
+  <button class="filestate" id="fileState" data-state="none" type="button"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span id="fileText">Solo in questo browser</span></button>
+  <button class="btn" id="saveBtn">Salva su file</button>
+  <button class="btn primary" id="pdfBtn" disabled>Scarica PDF</button>
+  <input type="file" id="openInput" accept=".beamboard,.lavagna,.json,application/json" hidden>
+  <input type="file" id="imgInput" accept="image/*,application/pdf,.pdf" multiple hidden>
+</div>
+<div class="app">
+  <nav class="pane" aria-label="Slide">
+    <div class="slides" id="slides"></div>
+    <button class="btn primary addslide" id="addSlide">Aggiungi slide</button>
+  </nav>
+  <section class="pane stage" aria-label="Anteprima">
+    <div class="stage-main" id="stageMain">
+      <canvas id="big" hidden></canvas>
+      <div class="splash" id="splash"><svg class="cerchi-palco" width="190" height="190" viewBox="0 0 180 180" aria-hidden="true"><circle cx="100" cy="88" r="72" fill="#F3B33D"/><circle cx="100" cy="88" r="48" fill="#E4572E"/><circle cx="100" cy="88" r="24" fill="#17A398"/><circle cx="22" cy="160" r="12" fill="#FBF6EC"/></svg><div class="big" id="splashTitle">Sto preparando il motore</div><p id="splashText">La prima apertura richiede qualche secondo. Tutto funziona anche senza internet.</p><div class="bar"><i id="barI"></i></div></div>
+      <span class="badge" id="badge"><span class="dot"></span>Aggiorno l’anteprima</span>
+      <div class="problem" id="problem"><div id="problemText"></div><p style="margin:6px 0 0"><button class="btn small ghost" id="logBtn">Dettagli tecnici</button></p><pre id="logBox"></pre></div>
+    </div>
+    <div class="stage-foot"><button class="btn small" id="prevBtn" aria-label="Slide precedente">‹</button><span id="pos"></span><button class="btn small" id="nextBtn" aria-label="Slide successiva">›</button></div>
+  </section>
+  <aside class="pane" aria-label="Contenuto della slide">
+    <div class="insp-head">
+      <div class="row"><h2 id="inspTitle">Slide</h2>
+      </div>
+    </div>
+    <div class="insp" id="insp"></div>
+  </aside>
+</div>
+
+<div class="modal" id="wizModal" role="dialog" aria-modal="true" aria-labelledby="wizQ">
+  <div class="sheet wiz">
+    <header><span class="kicker" id="wizKicker"></span><span class="dots" id="wizSteps" role="img"></span><button class="btn ghost" id="wizClose">Chiudi</button></header>
+    <div class="body"><h2 id="wizQ"></h2><p class="wizhelp" id="wizHelp"></p><div id="wizBody"></div><p class="wizerr" id="wizErr" role="alert"></p></div>
+    <footer><button class="btn" id="wizBack">Indietro</button><span class="spacer"></span><button class="btn primary" id="wizNext">Avanti</button></footer>
+  </div>
+</div>
+<div class="modal" id="setModal" role="dialog" aria-modal="true" aria-labelledby="smTitle">
+  <div class="sheet"><header><h2 id="smTitle">Aspetto e dati della presentazione</h2><button class="btn primary" data-close>Fatto</button></header><div class="body" id="setBody"></div></div>
+</div>
+<div class="toast" id="toast"><span id="toastText"></span><button id="toastAct"></button></div>
+
+<script src="vendor/pdf.min.js"></script>
+<script src="vendor/mathlive.min.js"></script>
+<script>try{MathLive.MathfieldElement.fontsDirectory=new URL('vendor/mathlive/fonts/',location.href).href;MathLive.MathfieldElement.soundsDirectory=null;MathLive.MathfieldElement.locale="it"}catch(e){}</script>
+<script src="js/gen.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

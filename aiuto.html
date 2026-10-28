@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida · BeamBoard</title>
+<link rel="icon" href="img/icona.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/pagine.css">
+</head>
+<body>
+<header class="testata"><svg class="cerchi" width="260" height="260" viewBox="0 0 180 180" aria-hidden="true"><circle cx="100" cy="88" r="72" fill="#F3B33D"/><circle cx="100" cy="88" r="48" fill="#E4572E"/><circle cx="100" cy="88" r="24" fill="#17A398"/><circle cx="22" cy="160" r="12" fill="#FBF6EC"/></svg><div class="in">
+  <div class="marchio"><img src="img/icona-192.png" alt="">BeamBoard</div>
+  <p class="occhiello">Guida</p>
+  <h1>Come si usa BeamBoard</h1>
+  <p class="attacco">BeamBoard crea presentazioni con la qualità tipografica di LaTeX, senza che tu debba conoscerlo: rispondi a qualche domanda e la slide si compone da sola.</p>
+  <nav class="indice" aria-label="Argomenti">
+    <a href="#inizio">Per iniziare</a><a href="#slide">Le slide</a><a href="#elementi">Gli elementi</a><a href="#formule">Le formule</a><a href="#aspetto">L’aspetto</a><a href="#salvare">Salvare</a><a href="#pdf">Il PDF</a><a href="#offline">Senza internet</a><a href="#privacy">I tuoi dati</a><a href="#problemi">Se qualcosa non va</a>
+  </nav>
+</div></header>
+<main>
+
+<section id="inizio">
+  <h2>Per iniziare</h2>
+  <p>Lo schermo è diviso in tre parti. A sinistra trovi le miniature delle slide, al centro la slide scelta così come apparirà nel PDF, a destra i suoi contenuti da modificare.</p>
+  <div class="schema"><span>Miniature delle slide</span><i>→</i><span>Anteprima vera</span><i>←</i><span>Contenuti da modificare</span></div>
+  <p>La prima volta BeamBoard scarica il suo motore, circa 25 MB: ci vuole qualche secondo, poi resta salvato nel browser e le aperture successive sono immediate. Ogni volta che cambi qualcosa, l’anteprima si aggiorna da sola dopo un paio di secondi.</p>
+</section>
+
+<section id="slide">
+  <h2>Le slide</h2>
+  <p>Premi <strong>Aggiungi slide</strong>: la procedura guidata ti chiede che cosa vuoi mostrare, per esempio alcuni punti, un confronto, una foto in grande o una formula, e poi ti accompagna una domanda alla volta. All’ultimo passo vedi la slide già pronta e decidi se crearla.</p>
+  <p>Passando con il mouse sopra una miniatura compare una piccola barra di comandi:</p>
+  <ul>
+    <li><strong>la bacchetta</strong> riapre la procedura guidata per quella slide, con i contenuti già inseriti, anche per cambiarne il tipo;</li>
+    <li><strong>le frecce</strong> spostano la slide su o giù;</li>
+    <li><strong>i due fogli</strong> la duplicano;</li>
+    <li><strong>il cestino</strong> la elimina: se ti sbagli, premi «Annulla» nell’avviso che compare in basso.</li>
+  </ul>
+  <p>Con le frecce della tastiera passi da una slide all’altra.</p>
+</section>
+
+<section id="elementi">
+  <h2>Gli elementi dentro la slide</h2>
+  <p>Ogni slide di contenuto è fatta di elementi impilati: testi, elenchi, immagini, riquadri, tabelle, citazioni e formule. Per aggiungerne uno premi <strong>Aggiungi elemento</strong> in fondo al pannello di destra; nelle slide a due colonne ti verrà chiesto anche in quale colonna metterlo.</p>
+  <h3>Scrivere il testo</h3>
+  <p>Scrivi normalmente. Per il <strong>grassetto</strong> metti due asterischi prima e dopo, <code>**così**</code>; per il <em>corsivo</em> uno solo, <code>*così*</code>. Una riga vuota inizia un nuovo paragrafo.</p>
+  <h3>Gli elenchi</h3>
+  <p>Una voce per riga. Per un sotto-punto, inizia la riga con un trattino. Puoi scegliere i numeri al posto dei puntini, e far comparire i punti uno alla volta durante la presentazione.</p>
+  <h3>Le immagini</h3>
+  <p>Vanno bene foto JPG e PNG, e grafici in PDF. Le foto molto grandi vengono ridotte automaticamente, così il PDF resta leggero. Le foto in formato HEIC, quello degli iPhone, vanno prima convertite in JPG.</p>
+  <h3>Se la slide è troppo piena</h3>
+  <p>Lo vedi subito nell’anteprima. Scegli «Piccolo» in <em>Grandezza del testo</em>, oppure dividi il contenuto su due slide: di solito è anche la scelta migliore per chi ascolta.</p>
+</section>
+
+<section id="formule">
+  <h2>Le formule</h2>
+  <p>Le formule si scrivono come su un quaderno, senza conoscere LaTeX. Mentre scrivi:</p>
+  <table>
+    <tr><th>Tasto</th><th>Cosa fa</th></tr>
+    <tr><td><kbd>/</kbd></td><td>crea una frazione: quello che hai appena scritto va al numeratore</td></tr>
+    <tr><td><kbd>^</kbd></td><td>sale all’esponente, come in x²</td></tr>
+    <tr><td><kbd>_</kbd></td><td>scende al pedice, come in x₂</td></tr>
+    <tr><td>le frecce</td><td>spostano il cursore, anche per uscire da una frazione o da un esponente</td></tr>
+  </table>
+  <p>Sotto la formula c’è una tastiera di simboli: radici, parentesi, sommatorie, integrali, limiti, ≤ ≥ ≠, lettere greche e altro. Passando sopra un pulsante ne leggi il nome. «Tutti i simboli…» apre la tastiera completa.</p>
+  <div class="nota">Nell’editor le formule hanno un carattere classico; nel PDF prendono lo stile del carattere scelto per la presentazione. L’anteprima mostra sempre il risultato vero.</div>
+</section>
+
+<section id="aspetto">
+  <h2>L’aspetto della presentazione</h2>
+  <p>In <strong>Aspetto e dati</strong> scegli il tema, il colore principale, il carattere e il formato (panoramico 16:9 o classico 4:3), e inserisci titolo, autore, ente e data della copertina. Ogni scelta si vede subito nell’anteprima e vale per tutte le slide: la presentazione resta coerente senza fatica.</p>
+</section>
+
+<section id="salvare">
+  <h2>Salvare il lavoro</h2>
+  <p>Mentre lavori, BeamBoard conserva tutto nel browser: se chiudi la scheda e la riapri, ritrovi la presentazione. Per avere anche un file sul computer, che puoi spostare, copiare o mandare a qualcuno, premi <strong>Salva su file</strong>: scegli dove metterlo, e da quel momento ogni modifica viene salvata lì da sola.</p>
+  <p>In alto vedi sempre lo stato: «Salvato in…» in verde quando è tutto a posto.</p>
+  <h3>«Salvataggio in pausa: premi qui»</h3>
+  <p>Per sicurezza il browser non lascia che una pagina scriva sui tuoi file per sempre: quando lo riapri, chiede di nuovo il permesso. Premi l’avviso rosso e conferma; nel frattempo non perdi nulla.</p>
+  <h3>Riaprire un lavoro</h3>
+  <p>Con <strong>Apri</strong> scegli un file <code>.beamboard</code>: la presentazione si riapre e le modifiche continuano a salvarsi in quel file. Con <strong>Nuova</strong> inizi da capo; quella precedente resta nel suo file.</p>
+  <div class="nota">Meglio non tenere i file di BeamBoard in cartelle che si sincronizzano con il cloud mentre ci lavori: durante la sincronizzazione il file può risultare momentaneamente vuoto.</div>
+</section>
+
+<section id="pdf">
+  <h2>Il PDF</h2>
+  <p><strong>Scarica PDF</strong> salva la presentazione finita, con il titolo come nome del file. Si apre su qualunque computer e si proietta a schermo intero con qualsiasi lettore di PDF. Gli elenchi «un punto alla volta» diventano pagine successive: basta andare avanti come con le slide.</p>
+</section>
+
+<section id="offline">
+  <h2>Usarla senza internet e installarla</h2>
+  <p>Dopo la prima apertura BeamBoard funziona anche offline. Nei browser che lo permettono compare il pulsante <strong>Installa</strong>: BeamBoard diventa un’applicazione con la sua icona e la sua finestra, come un programma qualsiasi. Quando pubblichiamo una versione nuova, un avviso in alto ti propone di aggiornarla.</p>
+</section>
+
+<section id="privacy">
+  <h2>I tuoi dati</h2>
+  <p>Tutto avviene sul tuo computer: il motore LaTeX gira dentro il browser, e testi e immagini non vengono mai inviati da nessuna parte. Non serve un account e non c’è nessun tracciamento.</p>
+</section>
+
+<section id="problemi">
+  <h2>Se qualcosa non va</h2>
+  <h3>Funziona al meglio con…</h3>
+  <p>Chrome, Edge, Vivaldi o Brave. Negli altri browser alcune funzioni, come il salvataggio automatico su file, non sono disponibili.</p>
+  <h3>La pagina resta bianca</h3>
+  <p>Ricarica la pagina. Se succede con il file aperto dal disco, di solito è perché il file non era ancora stato copiato o sincronizzato del tutto.</p>
+  <h3>«C’è un problema» nell’anteprima</h3>
+  <p>L’avviso indica in quale slide si trova il problema; l’anteprima continua a mostrare l’ultima versione riuscita. Prova ad annullare l’ultima modifica a quella slide.</p>
+  <h3>«Il motore si è fermato»</h3>
+  <p>BeamBoard lo riavvia in automatico. Se ricapita sempre sulla stessa slide, segnalalo indicando cosa contiene quella slide.</p>
+</section>
+
+</main>
+<footer><a href="./">Torna a BeamBoard</a> · <a href="crediti.html">Crediti e licenze</a></footer>
+</body>
+</html>

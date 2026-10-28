@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crediti e licenze · BeamBoard</title>
+<link rel="icon" href="img/icona.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/pagine.css">
+</head>
+<body>
+<header class="testata"><svg class="cerchi" width="260" height="260" viewBox="0 0 180 180" aria-hidden="true"><circle cx="100" cy="88" r="72" fill="#F3B33D"/><circle cx="100" cy="88" r="48" fill="#E4572E"/><circle cx="100" cy="88" r="24" fill="#17A398"/><circle cx="22" cy="160" r="12" fill="#FBF6EC"/></svg><div class="in">
+  <div class="marchio"><img src="img/icona-192.png" alt="">BeamBoard</div>
+  <p class="occhiello">Trasparenza</p>
+  <h1>Crediti e licenze</h1>
+  <p class="attacco">BeamBoard esiste grazie a molti progetti liberi. Qui trovi chi li ha realizzati e a quali condizioni li usiamo.</p>
+</div></header>
+<main>
+<section>
+  <h2>BeamBoard</h2>
+  <p>Un progetto di Aldo Dadone. BeamBoard è software libero, distribuito con licenza <strong>GNU Affero General Public License, versione 3</strong> (AGPL-3.0): puoi usarla, studiarla, modificarla e ridistribuirla, a patto che anche le versioni modificate, comprese quelle offerte come servizio online, restino libere e con il codice sorgente disponibile. Il testo completo è nel file <a href="LICENSE">LICENSE</a><span id="src"></span>.</p>
+</section>
+<section>
+  <h2>Componenti</h2>
+  <table>
+    <tr><th>Componente</th><th>A cosa serve</th><th>Licenza</th></tr>
+    <tr><td><a href="https://github.com/SwiftLaTeX/SwiftLaTeX" rel="noopener">SwiftLaTeX</a> (pdfTeX in WebAssembly)</td><td>Il motore che compila le presentazioni nel browser. In BeamBoard è modificato per leggere i file TeX da un pacchetto locale invece che da internet.</td><td>AGPL-3.0</td></tr>
+    <tr><td><a href="https://tug.org/texlive/" rel="noopener">TeX Live 2023</a> e pacchetti LaTeX</td><td>Il nucleo di LaTeX e i pacchetti inclusi (amsmath, graphicx, booktabs, babel e altri).</td><td>LPPL e altre licenze libere, secondo ciascun pacchetto</td></tr>
+    <tr><td><a href="https://github.com/josephwright/beamer" rel="noopener">Beamer</a></td><td>La classe LaTeX per le presentazioni e i suoi temi.</td><td>LPPL 1.3c o GPL 2</td></tr>
+    <tr><td><a href="https://github.com/matze/mtheme" rel="noopener">Metropolis</a></td><td>Il tema «Essenziale».</td><td>CC BY-SA 4.0</td></tr>
+    <tr><td><a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a></td><td>Mostra l’anteprima delle slide.</td><td>Apache 2.0</td></tr>
+    <tr><td><a href="https://cortexjs.io/mathlive/" rel="noopener">MathLive</a></td><td>L’editor visuale delle formule.</td><td>MIT</td></tr>
+    <tr><td><a href="https://github.com/101arrowz/fflate" rel="noopener">fflate</a></td><td>Decomprime il pacchetto dei file TeX.</td><td>MIT</td></tr>
+  </table>
+</section>
+<section>
+  <h2>Caratteri</h2>
+  <table>
+    <tr><th>Carattere</th><th>Licenza</th></tr>
+    <tr><td>Latin Modern, TeX Gyre (Heros, Adventor, Pagella, Termes)</td><td>GUST Font License</td></tr>
+    <tr><td>Fira Sans</td><td>SIL Open Font License 1.1</td></tr>
+    <tr><td>Font Awesome 5 Free</td><td>SIL Open Font License 1.1</td></tr>
+    <tr><td>Computer Modern e AMS in formato Type 1</td><td>SIL Open Font License 1.1</td></tr>
+    <tr><td>Caratteri KaTeX usati dall’editor delle formule</td><td>MIT</td></tr>
+  </table>
+  <p>Ogni componente resta proprietà dei rispettivi autori e autrici. Se ritieni che un’attribuzione sia incompleta o imprecisa, segnalalo: la correggeremo.</p>
+</section>
+</main>
+<footer><a href="./">Torna a BeamBoard</a> · <a href="aiuto.html">Guida</a></footer>
+<script>(function(){var m=/^([^.]+)\.github\.io$/.exec(location.hostname);if(!m)return;var seg=location.pathname.split('/').filter(Boolean)[0];var u='https://github.com/'+m[1]+'/'+(seg&&seg.indexOf('.')<0?seg:m[1]+'.github.io');var s=document.getElementById('src');s.innerHTML=', e il codice sorgente completo è su <a href="'+u+'" rel="noopener">GitHub</a>';})();</script>
+</body>
+</html>
